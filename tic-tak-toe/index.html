@@ -4,14 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <select name="" id="mySelect" onchange="fun1()">
-        <option value="">Apple</option>
-        <option value="">Orange</option>
-        <option value="">Pinaple</option>
-        <option value="">Cucumber</option>
-    </select>
-    <script src="script.js"></script>
+    <div class="content">
+
+        <div class="currentPlayer"> 
+            <span>Сейчас ходит <span id="currPlyr">X</span></span>
+        </div>
+
+        <div id="game"></div>
+
+        <div class="stat">
+            <table>
+                <th colspan="2">Статистика</th>
+                <tr>
+                    <td>X</td>
+                    <td><span id="sX">0</span></td>
+                </tr>
+                <tr>
+                    <td>O</td>
+                    <td><span id="sO">0</span></td>
+                </tr>
+                <tr>
+                    <td>Ничьи</td>
+                    <td><span id="sD">0</span></td>
+                </tr>
+            </table>
+        </div>
+        <script src="script.js" ></script>
+    </div>
 </body>
 </html>
