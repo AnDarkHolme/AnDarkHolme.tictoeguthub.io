@@ -46,6 +46,7 @@ export default {
     loading: true
   }),
   async mounted() {
+        debugger
     const id = this.$route.params.id
     const record = await this.$store.dispatch('fetchRecordById', id)
     const category = await this.$store.dispatch(

@@ -11,9 +11,9 @@
     <Loader v-if="loading"/>
 
     <div v-else class="row">
-      <HomeBill :rates="currency.rates"/>
+      <HomeBill :conversion_rates="currency.conversion_rates"/>
 
-      <HomeCurrency :rates="currency.rates" :date="currency.date"/>
+      <HomeCurrency :conversion_rates="currency.conversion_rates" :date="currency.time_last_update_utc"/>
     </div>
   </div>
 </template>

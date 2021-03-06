@@ -14,20 +14,20 @@
 
 <script>
 export default {
-  props: ['rates'],
+  props: ['conversion_rates'],
   data: () => ({
     currencies: ['RUB', 'USD', 'EUR']
   }),
   computed: {
     base() {
       return (
-        this.$store.getters.info.bill / (this.rates['RUB'] / this.rates['EUR'])
+        this.$store.getters.info.bill / (this.conversion_rates['RUB'] / this.conversion_rates['EUR'])
       )
     }
   },
   methods: {
     getCurrency(currency) {
-      return Math.floor(this.base * this.rates[currency])
+      return Math.floor(this.base * this.conversion_rates[currency])
     }
   }
 }
